@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .comments{
+            width: 40vw;
+            height: 63vh;
+            margin: auto;
+            border: 3px solid rgb(50, 78, 172);
+        }
+
+        .comments_header{
+            background-color: rgb(50, 78, 172);
+            margin-top: 0%;
+            height: 5vh;
+            text-align: center;
+            padding-top: 1vh;
+            
+        }
+
+        .comments_space{
+            height: 27vh;
+            overflow: auto;
+            margin-bottom: 1vh;
+        }
+
+        .comments_form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comments_input{
+            height: 8vh;
+            width: 38vw;
+            margin: auto;
+        }
+
+        .comments_button{
+            height: 4vh;
+            width: 31vw;
+            margin: auto;
+            margin-top: 1vh;
+            background-color: rgb(172, 150, 50);
+        }
+
+        .comments_nameInput{
+            width: 38vw;
+            margin: auto;
+            margin-bottom: 1vh;
+        }
+
+        .comments_label{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: smaller;
+            margin-left: 1vw;
+            margin-top: 0.8vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments">
+        <h2 class="comments_header">Comments</h2>
+        <div class="comments_space" id="comments_space">
+            
+        </div>
+        <form class="comments_form">
+            <input id="nameinput" class="comments_nameInput" placeholder="Введите ваше имя" type="text">
+            <textarea id="comments_input" class="comments_input" placeholder="Введите ваш комментарий..."></textarea>
+            <label class="comments_label">Можете добавить ссылку на вашу аватарку: <input type="text" id="imageLink"></label>
+            <button class="comments_button" onclick="checkSpam(event)" type="button">Send</button>
+        </form>
+
+
+    </div>
+
+    <script src="comments.js">
+        
+    </script>
+</body>
+</html>
